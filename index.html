@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AnyWeed — CBD Shop &amp; Cannabis Store in Berlin</title>
+<meta name="description" content="AnyWeed is a CBD shop and cannabis store in Berlin-Prenzlauer Berg, offering CBD flowers, pre-rolled joints, vapes, gummies and smoking accessories. Visit us at Kastanienallee 14.">
+<link rel="icon" href="https://s.floomby.com/uploads/s/250826/pqcm7PXk.jpg?download=1&name=Screenshot-25-08-2026%2004:20:00.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#122019;
+    --bg-alt:#182920;
+    --bg-card:#1c3226;
+    --cream:#f3eee0;
+    --cream-dim:#c9c2ac;
+    --gold:#c9a662;
+    --gold-soft:#e4cf9a;
+    --sage:#8fa68e;
+    --line:rgba(243,238,224,0.14);
+    --line-strong:rgba(243,238,224,0.28);
+    --radius:2px;
+    --maxw:1180px;
+    --shadow:0 24px 60px -30px rgba(0,0,0,0.6);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--cream);
+    font-family:'Public Sans',sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  h1,h2,h3,h4{font-family:'Fraunces',serif;font-weight:600;margin:0;letter-spacing:-0.01em;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--gold-soft);
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+  }
+  .eyebrow::before{content:"";width:22px;height:1px;background:var(--gold-soft);display:inline-block;}
+  :focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
+
+  /* ---------- Header ---------- */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(18,32,25,0.86);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:16px 28px;max-width:var(--maxw);margin:0 auto;
+  }
+  .brand{display:flex;align-items:center;gap:12px;}
+  .brand img{width:42px;height:42px;border-radius:50%;object-fit:cover;border:1px solid var(--line-strong);}
+  .brand span{font-family:'Fraunces',serif;font-size:20px;font-weight:600;letter-spacing:0.01em;}
+  nav ul{list-style:none;display:flex;gap:32px;margin:0;padding:0;}
+  nav ul li a{
+    font-size:14px;color:var(--cream-dim);
+    transition:color .2s ease;
+    padding-bottom:3px;border-bottom:1px solid transparent;
+  }
+  nav ul li a:hover{color:var(--cream);border-color:var(--gold);}
+  .nav-actions{display:flex;align-items:center;gap:14px;}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:0.08em;text-transform:uppercase;
+    padding:12px 22px;border-radius:var(--radius);border:1px solid var(--gold);
+    transition:all .2s ease;cursor:pointer;white-space:nowrap;
+  }
+  .btn-solid{background:var(--gold);color:#122019;}
+  .btn-solid:hover{background:var(--gold-soft);}
+  .btn-outline{color:var(--cream);border-color:var(--line-strong);}
+  .btn-outline:hover{border-color:var(--gold);color:var(--gold-soft);}
+  .menu-toggle{display:none;background:none;border:1px solid var(--line-strong);color:var(--cream);padding:8px 10px;border-radius:var(--radius);}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;min-height:88vh;display:flex;align-items:flex-end;
+    background:
+      linear-gradient(180deg, rgba(18,32,25,0.55) 0%, rgba(18,32,25,0.75) 55%, var(--bg) 100%),
+      url('https://img.magnific.com/premium-photo/hemp-oil-cannabis-leaves-placed-dark-surface_7180-2368.jpg?ga=GA1.1.1529624084.1787638244&semt=ais_hybrid&w=740&q=80') center/cover no-repeat;
+  }
+  .hero-inner{max-width:var(--maxw);margin:0 auto;padding:120px 28px 72px;width:100%;}
+  .hero h1{
+    font-size:clamp(38px,6vw,68px);
+    line-height:1.04;
+    max-width:820px;
+    margin:22px 0 20px;
+    color:var(--cream);
+  }
+  .hero h1 em{font-style:italic;color:var(--gold-soft);}
+  .hero p{max-width:520px;color:var(--cream-dim);font-size:17px;margin-bottom:34px;}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:16px;}
+  .hero-meta{
+    margin-top:56px;padding-top:24px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;gap:36px;
+    font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--cream-dim);letter-spacing:0.03em;
+  }
+  .hero-meta strong{color:var(--gold-soft);display:block;font-family:'Fraunces',serif;font-size:18px;font-weight:600;margin-bottom:2px;}
+
+  /* ---------- Section shell ---------- */
+  section{padding:104px 0;}
+  .section-head{max-width:640px;margin-bottom:56px;}
+  .section-head h2{font-size:clamp(30px,4vw,44px);margin-top:16px;line-height:1.1;}
+  .section-head p{color:var(--cream-dim);margin-top:16px;font-size:16px;max-width:520px;}
+  .alt{background:var(--bg-alt);}
+
+  /* ---------- Services ---------- */
+  .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+  .service-card{
+    background:var(--bg);padding:36px 30px;position:relative;
+    transition:background .25s ease;
+  }
+  .service-card:hover{background:var(--bg-card);}
+  .service-icon{
+    width:46px;height:46px;border:1px solid var(--line-strong);border-radius:50%;
+    display:flex;align-items:center;justify-content:center;margin-bottom:22px;color:var(--gold-soft);
+  }
+  .service-card h3{font-size:19px;margin-bottom:10px;}
+  .service-card p{color:var(--cream-dim);font-size:14.5px;margin:0;}
+
+  /* ---------- Why choose ---------- */
+  .why-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:center;}
+  .why-list{display:flex;flex-direction:column;}
+  .why-item{
+    display:flex;gap:22px;padding:26px 0;border-top:1px solid var(--line);
+  }
+  .why-item:last-child{border-bottom:1px solid var(--line);}
+  .why-num{font-family:'IBM Plex Mono',monospace;color:var(--gold);font-size:13px;padding-top:4px;}
+  .why-item h4{font-size:19px;margin-bottom:8px;}
+  .why-item p{color:var(--cream-dim);font-size:14.5px;margin:0;}
+  .why-media{position:relative;border:1px solid var(--line-strong);}
+  .why-media img{width:100%;height:520px;object-fit:cover;}
+  .stamp{
+    position:absolute;bottom:-1px;right:-1px;background:var(--gold);color:#122019;
+    width:118px;height:118px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    text-align:center;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;
+    line-height:1.5;padding:10px;
+  }
+
+  /* ---------- Gallery ---------- */
+  .gallery{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:16px;}
+  .gallery img{width:100%;height:340px;object-fit:cover;border:1px solid var(--line);}
+  .gallery-col{display:flex;flex-direction:column;gap:16px;}
+  .gallery-col img{height:162px;}
+
+  /* ---------- FAQ ---------- */
+  .faq{max-width:820px;}
+  .faq-item{border-top:1px solid var(--line);}
+  .faq-item:last-child{border-bottom:1px solid var(--line);}
+  .faq-q{
+    width:100%;background:none;border:none;color:var(--cream);text-align:left;
+    padding:26px 4px;display:flex;justify-content:space-between;align-items:center;gap:24px;
+    font-family:'Fraunces',serif;font-size:19px;cursor:pointer;
+  }
+  .faq-q .plus{font-family:'IBM Plex Mono',monospace;font-size:20px;color:var(--gold);transition:transform .25s ease;flex-shrink:0;}
+  .faq-item[open] .plus{transform:rotate(45deg);}
+  .faq-a{padding:0 4px 28px;color:var(--cream-dim);font-size:15px;max-width:640px;}
+  .faq-item summary{list-style:none;}
+  .faq-item summary::-webkit-details-marker{display:none;}
+
+  /* ---------- Contact ---------- */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;}
+  .contact-card{border:1px solid var(--line-strong);padding:40px;background:var(--bg-card);}
+  .contact-row{display:flex;gap:16px;padding:18px 0;border-top:1px solid var(--line);}
+  .contact-row:first-child{border-top:none;}
+  .contact-label{
+    font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:0.1em;text-transform:uppercase;
+    color:var(--gold-soft);width:110px;flex-shrink:0;padding-top:2px;
+  }
+  .contact-value{font-size:16px;}
+  .contact-value a:hover{color:var(--gold-soft);}
+  .map-frame{border:1px solid var(--line-strong);overflow:hidden;height:100%;min-height:440px;}
+  .map-frame iframe{width:100%;height:100%;min-height:440px;filter:saturate(0.85) contrast(1.05);}
+
+  /* ---------- Footer ---------- */
+  footer{border-top:1px solid var(--line);padding:56px 0 32px;}
+  .footer-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:32px;padding-bottom:36px;}
+  .footer-brand{display:flex;align-items:center;gap:12px;}
+  .footer-brand img{width:38px;height:38px;border-radius:50%;object-fit:cover;}
+  .footer-links{display:flex;gap:40px;flex-wrap:wrap;}
+  .footer-links div h5{
+    font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;
+    color:var(--gold-soft);margin-bottom:14px;
+  }
+  .footer-links ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px;}
+  .footer-links a{color:var(--cream-dim);font-size:14px;}
+  .footer-links a:hover{color:var(--cream);}
+  .footer-bottom{
+    border-top:1px solid var(--line);padding-top:24px;display:flex;justify-content:space-between;
+    flex-wrap:wrap;gap:12px;font-size:12.5px;color:var(--cream-dim);
+  }
+  .footer-bottom p{margin:0;max-width:640px;}
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:900px){
+    nav ul{display:none;}
+    .menu-toggle{display:inline-flex;}
+    .service-grid{grid-template-columns:1fr 1fr;}
+    .why-grid, .contact-grid{grid-template-columns:1fr;}
+    .why-media img{height:360px;}
+    .gallery{grid-template-columns:1fr;}
+    .gallery-col{flex-direction:row;}
+    .gallery-col img{height:200px;}
+  }
+  @media (max-width:560px){
+    .service-grid{grid-template-columns:1fr;}
+    section{padding:72px 0;}
+    .hero{min-height:82vh;}
+    .hero-inner{padding:100px 20px 48px;}
+    .hero-actions .btn{width:100%;}
+    .stamp{width:96px;height:96px;font-size:10px;}
+    .gallery-col{flex-direction:column;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="brand" href="#top">
+      <img src="https://s.floomby.com/uploads/s/250826/pqcm7PXk.jpg?download=1&name=Screenshot-25-08-2026%2004:20:00.jpg" alt="AnyWeed logo">
+      <span>AnyWeed</span>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why">Why Us</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-outline" href="tel:+491632648031">Call Us</a>
+      <a class="btn btn-solid" href="https://www.google.com/maps?cid=4067389105642882463" target="_blank" rel="noopener">Get Directions</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ---------- HERO ---------- -->
+  <section class="hero" style="padding:0;">
+    <div class="hero-inner">
+      <span class="eyebrow">Kastanienallee 14 · Berlin</span>
+      <h1>Berlin's considered <em>CBD shop</em><br>for cannabis, done properly.</h1>
+      <p>AnyWeed is a neighbourhood CBD shop and cannabis store on Kastanienallee — lab-tested flowers, pre-rolled joints, vapes and accessories, chosen and explained by people who actually use them.</p>
+      <div class="hero-actions">
+        <a class="btn btn-solid" href="https://www.google.com/maps?cid=4067389105642882463" target="_blank" rel="noopener">Visit the Shop</a>
+        <a class="btn btn-outline" href="#services">Browse Our Range</a>
+      </div>
+      <div class="hero-meta">
+        <div><strong>Kastanienallee 14</strong>12627 Berlin, Germany</div>
+        <div><strong>+49 163 2648031</strong>Call or WhatsApp</div>
+        <div><strong>anyweed.com</strong>Shop &amp; store info online</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- SERVICES ---------- -->
+  <section id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Our Services</span>
+        <h2>Everything for CBD and cannabis, under one roof.</h2>
+        <p>From our CBD flower counter to the accessories wall, AnyWeed is built to serve first-time visitors and regulars with equal care.</p>
+      </div>
+
+      <div class="service-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C7 6 4 10 4 14a8 8 0 0016 0c0-4-3-8-8-12z"/></svg>
+          </div>
+          <h3>CBD &amp; Cannabis Flowers</h3>
+          <p>A rotating selection of CBD flowers and cannabis flowers, sourced and lab-tested, with staff on hand to talk through strength, aroma and effect.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12h18M6 8l-3 4 3 4M18 8l3 4-3 4"/></svg>
+          </div>
+          <h3>Pre-Rolled &amp; CBD Joints</h3>
+          <p>Pre-rolled joints and hemp joints ready to go, plus roll-your-own supplies for anyone who prefers to build their own.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="8" y="3" width="8" height="18" rx="3"/><path d="M9 9h6"/></svg>
+          </div>
+          <h3>Cannabis &amp; CBD Vapes</h3>
+          <p>Cannabis vapes, CBD vapes and hemp vape hardware — from starter devices to pods, with honest advice on what suits your habits.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2.5"/></svg>
+          </div>
+          <h3>CBD &amp; Cannabis Gummies</h3>
+          <p>CBD gummies and cannabis gummies in clearly labelled strengths, kept behind the counter and sold responsibly to adults only.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12a8 8 0 0116 0M4 12a8 8 0 008 8M4 12a8 8 0 018-8"/></svg>
+          </div>
+          <h3>Grinders &amp; Accessories</h3>
+          <p>Grinders, storage jars and every-day cannabis accessories built to last, picked for quality over novelty.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+          </div>
+          <h3>Rolling Papers &amp; Head Shop</h3>
+          <p>Rolling papers, filters and smoking accessories from trusted brands — a proper head shop counter, well organised and easy to browse.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- WHY CHOOSE US ---------- -->
+  <section id="why" class="alt">
+    <div class="wrap why-grid">
+      <div>
+        <span class="eyebrow">Why Choose AnyWeed?</span>
+        <h2 style="font-size:clamp(28px,3.6vw,38px);margin:16px 0 34px;">A CBD shop that treats the details as seriously as the products.</h2>
+        <div class="why-list">
+          <div class="why-item">
+            <span class="why-num">01</span>
+            <div>
+              <h4>Lab-tested, clearly labelled</h4>
+              <p>Every CBD and cannabis product on the shelf is tested and labelled, so what's on the packet matches what's in your hand.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <span class="why-num">02</span>
+            <div>
+              <h4>Right in Prenzlauer Berg</h4>
+              <p>Easy to find on Kastanienallee, with a straightforward layout — no guesswork, no hovering by the door.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <span class="why-num">03</span>
+            <div>
+              <h4>Staff who know the stock</h4>
+              <p>Ask about strength, aroma, or how a vape actually feels to use — our team shops here too, and it shows.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <span class="why-num">04</span>
+            <div>
+              <h4>One shop, full range</h4>
+              <p>Flowers, joints, vapes, gummies, and every accessory in between — no need to visit three different stores.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="why-media">
+        <img src="https://img.magnific.com/free-photo/weed-leaves-oil-product-still-life_23-2151651071.jpg?ga=GA1.1.1529624084.1787638244&semt=ais_hybrid&w=740&q=80" alt="Cannabis and CBD oil products on display at AnyWeed">
+        <div class="stamp">Lab<br>Tested<br>Berlin</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- GALLERY ---------- -->
+  <section id="gallery">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Inside The Shop</span>
+        <h2>A look at the counter.</h2>
+      </div>
+      <div class="gallery">
+        <img src="https://img.magnific.com/premium-photo/closeup-womans-hand-holding-cannabis-buds-shelves-store_1308175-19819.jpg?ga=GA1.1.1529624084.1787638244" alt="Hand holding cannabis buds in front of the AnyWeed shelves">
+        <div class="gallery-col">
+          <img src="https://img.magnific.com/premium-photo/hemp-oil-cannabis-leaves-placed-dark-surface_7180-2368.jpg?ga=GA1.1.1529624084.1787638244&semt=ais_hybrid&w=740&q=80" alt="Hemp oil and cannabis leaves">
+          <img src="https://img.magnific.com/free-photo/weed-leaves-oil-product-still-life_23-2151651071.jpg?ga=GA1.1.1529624084.1787638244&semt=ais_hybrid&w=740&q=80" alt="Cannabis leaves and oil product still life">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- FAQ ---------- -->
+  <section id="faq" class="alt">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">FAQs</span>
+        <h2>Questions we hear at the counter.</h2>
+      </div>
+      <div class="faq">
+        <details class="faq-item" open>
+          <summary class="faq-q">Is CBD legal to buy in Germany?<span class="plus">+</span></summary>
+          <div class="faq-a">Yes. CBD products sold at AnyWeed are compliant with German and EU regulations. If you're ever unsure about a specific product's THC content or legal status, just ask our staff — they can walk you through it.</div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q">What's the difference between your CBD and cannabis products?<span class="plus">+</span></summary>
+          <div class="faq-a">CBD products are non-intoxicating and legal for general sale, while cannabis products may contain THC and are sold under the applicable rules for adult access. We clearly label every item so you know exactly what you're choosing.</div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q">Do I need to be a certain age to shop at AnyWeed?<span class="plus">+</span></summary>
+          <div class="faq-a">Yes, you must be 18 or older to purchase cannabis and CBD products in our store. We may ask for ID at the counter, so please bring one along.</div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q">Do you sell pre-rolled joints and rolling accessories?<span class="plus">+</span></summary>
+          <div class="faq-a">Yes — we stock pre-rolled CBD and hemp joints, plus rolling papers, filters, grinders and other smoking accessories for anyone who prefers to roll their own.</div>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-q">Where is AnyWeed located and what are your hours?<span class="plus">+</span></summary>
+          <div class="faq-a">You'll find us at Kastanienallee 14, 12627 Berlin. Check our Google listing for current opening hours, or give us a call at +49 163 2648031 before you head over.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- CONTACT ---------- -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Contact Information</span>
+        <h2>Come by, or reach out first.</h2>
+        <p>Kastanienallee is easy to reach by tram or on foot — say hello, or call ahead if you'd like us to set something aside.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="contact-row">
+            <span class="contact-label">Address</span>
+            <span class="contact-value">Kastanienallee 14<br>12627 Berlin, Germany</span>
+          </div>
+          <div class="contact-row">
+            <span class="contact-label">Phone</span>
+            <span class="contact-value"><a href="tel:+491632648031">+49 163 2648031</a></span>
+          </div>
+          <div class="contact-row">
+            <span class="contact-label">Website</span>
+            <span class="contact-value"><a href="https://anyweed.com/" target="_blank" rel="noopener">anyweed.com</a></span>
+          </div>
+          <div class="contact-row">
+            <span class="contact-label">Find Us</span>
+            <span class="contact-value"><a href="https://www.google.com/maps?cid=4067389105642882463" target="_blank" rel="noopener">View on Google Maps →</a></span>
+          </div>
+          <div style="margin-top:28px;">
+            <a class="btn btn-solid" href="https://www.google.com/maps?cid=4067389105642882463" target="_blank" rel="noopener">Get Directions</a>
+          </div>
+        </div>
+        <div class="map-frame">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2426.7656184886955!2d13.601639599999999!3d52.537674700000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a84b04a0625e5d%3A0x387244d77523459f!2sAnyWeed!5e0!3m2!1sen!2s!4v1787638359040!5m2!1sen!2s" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="AnyWeed location on Google Maps"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="https://s.floomby.com/uploads/s/250826/pqcm7PXk.jpg?download=1&name=Screenshot-25-08-2026%2004:20:00.jpg" alt="AnyWeed logo">
+        <div>
+          <div style="font-family:'Fraunces',serif;font-size:19px;">AnyWeed</div>
+          <div style="font-size:13px;color:var(--cream-dim);">CBD Shop &amp; Cannabis Store, Berlin</div>
+        </div>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h5>Shop</h5>
+          <ul>
+            <li><a href="#services">CBD Flowers</a></li>
+            <li><a href="#services">Pre-Rolled Joints</a></li>
+            <li><a href="#services">Vapes</a></li>
+            <li><a href="#services">Gummies</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Site</h5>
+          <ul>
+            <li><a href="#why">Why Us</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Get In Touch</h5>
+          <ul>
+            <li><a href="tel:+491632648031">+49 163 2648031</a></li>
+            <li><a href="https://anyweed.com/" target="_blank" rel="noopener">anyweed.com</a></li>
+            <li><a href="https://www.google.com/maps?cid=4067389105642882463" target="_blank" rel="noopener">Directions</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Products for adults 18+ only. CBD and cannabis items are sold in line with applicable German and EU regulations; ask our team if you have questions about any product's legal status.</p>
+      <p>© 2026 AnyWeed, Kastanienallee 14, 12627 Berlin.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
